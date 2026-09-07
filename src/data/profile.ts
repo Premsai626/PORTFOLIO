@@ -1,23 +1,22 @@
 import { Profile } from '../types';
 
 /**
- * Centralized Profile Information
- * Change links and profile info here without touching UI components.
- * Empty strings are safely treated as placeholders and handled gracefully.
+ * Developer Profile Data
+ * Grounded, human-written information reflecting real engineering work.
  */
 export const profile: Profile = {
   name: "PREM SAI",
-  role: "Software Engineer • Full Stack & AI Developer",
+  role: "Computer Science (AIML) Student & Software Developer",
   titles: [
-    "Software Engineer",
-    "Full Stack Developer",
-    "AI & ML Builder",
-    "IoT & Robotics Developer"
+    "Full-Stack Web Developer",
+    "AI & ML Developer",
+    "IoT & Robotics Builder",
+    "Software Engineer"
   ],
-  headline: "Building web apps, AI systems, and IoT hardware with clean architecture.",
-  bio: "Computer Science (AIML) student at MLRIT building full-stack platforms, machine learning pipelines, and robotics hardware.",
-  tagline: "Clean code, practical AI systems, and responsive web platforms.",
-  status: "Open to internships & software developer roles",
+  headline: "Hey, I'm Prem Sai — a computer science student building practical web apps, computer vision tools, and microcontroller robotics.",
+  bio: "Currently studying Computer Science with a focus on AI & Machine Learning at MLR Institute of Technology. I enjoy writing clean code, wiring sensors to microcontrollers, and deploying real full-stack web applications that solve practical problems.",
+  tagline: "Building software with curiosity, clean architecture, and practical engineering.",
+  status: "Open to software engineering internships & developer roles",
   avatarUrl: "/images/prem-sai-avatar.jpg",
   education: {
     degree: "B.Tech in Computer Science & Engineering",
@@ -27,9 +26,9 @@ export const profile: Profile = {
     status: "Undergraduate Student",
   },
   stats: [
-    { label: "Technologies", value: "15+", description: "Languages, tools & frameworks" },
-    { label: "Hours Coded", value: "1,200+", description: "Building & shipping projects" },
-    { label: "Commitment", value: "100%", description: "Continuous learning" },
+    { label: "Core Projects", value: "4", description: "Hardware, Web & AI builds" },
+    { label: "Hackathon Win", value: "1st Place", description: "Web Dev @ Workshop Carnival" },
+    { label: "Credentials", value: "6", description: "Cisco, MongoDB & Autodesk certified" },
   ],
   links: {
     github: "https://github.com/Premsai626",

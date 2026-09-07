@@ -1,49 +1,48 @@
 import { Project } from '../types';
 
 /**
- * Centralized Projects Data
- * Detailed, comprehensive project configurations for interactive project cards,
- * real-time simulations, and deep-dive technical modals.
+ * Projects Data
+ * Detailed real-world project configurations written from a genuine developer perspective.
  *
- * Ordered as requested:
- * 1. Obstacle-Avoiding Wi-Fi Robot (IoT / Hardware)
- * 2. ORBIT (AI Technical Interview & Automated Proctoring Platform)
- * 3. VibeTune (AI Mood-Based Music & Wellness Experience)
- * 4. Intelligent FAQ Assistant (Smart Documentation Search & Question-Answering Bot)
+ * Sequence:
+ * 1. Obstacle-Avoiding Wi-Fi Robot (IoT / Embedded C++)
+ * 2. ORBIT (AI Technical Interview & In-Browser Proctoring)
+ * 3. VibeTune (1st Place Hackathon Winner — AI Mood Music Experience)
+ * 4. Intelligent FAQ Assistant (Documentation Vector Search & Q&A)
  */
 export const projects: Project[] = [
   {
     id: "obstacle-avoiding-robot",
     name: "Obstacle-Avoiding Wi-Fi Robot",
-    tagline: "Autonomous Obstacle Avoidance & Wi-Fi Teleoperation Smart Car",
-    description: "Dual-mode robotic car built with asynchronous C++ on the ESP8266. Features autonomous ultrasonic navigation and a real-time browser WebSocket dashboard for remote steering.",
+    tagline: "Autonomous ultrasonic navigation & real-time Wi-Fi teleoperation car",
+    description: "A two-wheel robotics build powered by an ESP8266 microcontroller and written in C++. It can either navigate around obstacles autonomously or be steered in real time from any phone or laptop browser via a local WebSocket connection.",
     category: "IoT / Hardware",
     featured: true,
-    technologies: ["C++", "ESP8266", "Embedded IoT", "Ultrasonic Sensors", "Motor Drivers", "WebSockets"],
+    technologies: ["C++", "ESP8266", "Embedded Systems", "HC-SR04 Ultrasonic", "L298N Motor Driver", "WebSockets"],
     gradient: "from-emerald-500/20 via-teal-600/20 to-blue-600/20",
     accentColor: "#10b981",
     stats: [
-      { label: "Detection Range", value: "2cm — 400cm" },
-      { label: "Latency", value: "<25ms" },
-      { label: "Control", value: "Local Wi-Fi" },
+      { label: "Hardware", value: "ESP8266" },
+      { label: "Range", value: "2cm – 400cm" },
+      { label: "Interface", value: "Browser JoyPad" },
     ],
-    overview: "Combines embedded systems with web protocols. Runs on an ESP8266 microcontroller processing ultrasonic distance telemetry while hosting an onboard async WebSocket server for zero-install browser steering.",
-    problem: "Traditional hobby robots rely on non-interactive navigation loops or bulky RF controllers lacking telemetry feedback.",
-    solution: "Asynchronous C++ architecture separating motor timing and ultrasonic polling from network communication for seamless autonomous and manual control.",
+    overview: "Built as a hands-on exploration of microcontroller programming and real-time networking. The robot reads an HC-SR04 ultrasonic distance sensor to steer clear of walls, and hosts an onboard web server serving a touch-friendly virtual joystick for direct manual control.",
+    problem: "Most starter robotics cars either only run a rigid autonomous loop without feedback, or require bulky dedicated RF remotes that don't allow live diagnostics.",
+    solution: "Wrote non-blocking asynchronous C++ routines on the ESP8266. Motor PWM pulse trains run concurrently with a lightweight WebSocket server, enabling instant switching between autonomous pathfinding and browser-based remote drive.",
     features: [
-      "Dual-Mode Operation: Switch between autonomous avoidance and real-time remote teleoperation.",
-      "Ultrasonic Proximity: Continuous distance scanning from 2cm to 400cm with emergency braking.",
-      "Embedded Web Controller: Self-hosted WebSocket server running on ESP8266 for zero-install browser access.",
-      "Touch Virtual Joystick: Responsive touch interface with PWM speed control.",
-      "Hardware Safeguards: Motor stall protection and brownout mitigation across H-bridge drivers."
+      "Dual Control Modes: One-tap toggle between auto-navigation and live browser steering.",
+      "Ultrasonic Proximity Sensing: Real-time distance measurement with emergency brake threshold at 20 cm.",
+      "Zero-Install Web Remote: Connects directly to the robot's local Wi-Fi hotspot to open the control pad in any browser.",
+      "Analog-Style Touch Joystick: Custom HTML5 canvas joystick sending directional vectors with variable motor speed.",
+      "Power & Motor Isolation: Separate power regulation rails to avoid microcontroller resets during high motor draw."
     ],
     challenges: [
-      "Filtering sensor noise and false reflections via moving-average algorithms.",
-      "Handling WebSocket streaming concurrently with non-blocking PWM loops."
+      "Filtering noisy ultrasonic sensor echoes caused by angled walls using a rolling median window.",
+      "Preventing motor jitter while the ESP8266 handles incoming Wi-Fi packets through non-blocking async timers."
     ],
     results: [
-      "100% collision avoidance in autonomous mode across indoor obstacle courses.",
-      "Sub-25ms manual teleoperation latency over local Wi-Fi."
+      "Reliable obstacle avoidance indoors with smooth turns and zero collisions.",
+      "Responsive manual steering with near-instant feel over local Wi-Fi."
     ],
     links: {
       github: "https://github.com/Premsai626/obstacle-avoiding-car.git",
@@ -54,35 +53,35 @@ export const projects: Project[] = [
   {
     id: "orbit-ai-interview",
     name: "ORBIT",
-    tagline: "AI-Powered Technical Interview & Automated Proctoring Platform",
-    description: "Technical screening platform that conducts conversational AI interviews, checks test integrity with in-browser OpenCV gaze tracking, and produces structured candidate scorecards.",
+    tagline: "AI technical interview platform with in-browser code evaluation and proctoring",
+    description: "A web platform designed to conduct interactive coding and technical interviews. It asks dynamic questions, evaluates live code submissions, and uses client-side computer vision to check interview integrity without sending candidate video to external servers.",
     category: "AI / ML",
     featured: true,
-    technologies: ["React", "TypeScript", "Python", "Supabase", "AI APIs", "WebRTC", "OpenCV"],
+    technologies: ["React", "TypeScript", "Python", "Supabase", "OpenCV", "WebAssembly", "Tailwind CSS"],
     gradient: "from-cyan-500/20 via-blue-600/20 to-purple-600/20",
     accentColor: "#06b6d4",
     stats: [
-      { label: "Accuracy", value: "98%" },
-      { label: "Response", value: "<150ms" },
-      { label: "Proctoring", value: "6 Signals" },
+      { label: "Vision", value: "Client-Side" },
+      { label: "Backend", value: "Supabase" },
+      { label: "Status", value: "Live on Vercel" },
     ],
-    overview: "Replaces static coding quizzes with an interactive conversational AI interviewer that asks dynamic follow-ups, evaluates code in real-time, and monitors browser integrity.",
-    problem: "Manual screening takes hundreds of engineering hours, introduces subjective bias, and struggles to scale while maintaining integrity.",
-    solution: "Full-stack platform pairing adaptive LLM dialog with real-time OpenCV gaze tracking, focus detection, and persistent Supabase scorecards.",
+    overview: "Created to help students practice realistic technical interviews. Instead of static multiple-choice questions, ORBIT listens to answers, asks relevant technical follow-ups, provides a syntax-highlighted code editor, and generates structured feedback reports.",
+    problem: "Scheduling mock technical interviews with senior engineers is hard to organize, while generic quiz platforms don't evaluate how a candidate thinks through a problem.",
+    solution: "Built a full-stack web application combining adaptive AI questioning, an embedded code runner, and lightweight in-browser OpenCV vision models to track gaze and tab focus directly on device.",
     features: [
-      "Adaptive AI Interviewer: Adjusts question difficulty and asks intelligent follow-ups based on candidate answers.",
-      "Computer Vision Proctoring: In-browser OpenCV landmark analysis detecting gaze shifts, missing faces, and tab switches.",
-      "In-Browser Code Editor: Syntax highlighting, real-time code execution, and algorithmic scoring.",
-      "Recruiter Scorecards: Automated evaluation dossiers on technical depth, clarity, and integrity.",
-      "Supabase Persistence: Secure authentication, candidate history, and cloud transcript storage."
+      "Conversational Technical Q&A: Generates dynamic follow-up questions tailored to the candidate's specific answers.",
+      "In-Browser Code Workspace: Code editor with syntax highlighting, language selection, and execution test cases.",
+      "Privacy-First Proctoring: Runs OpenCV face and gaze tracking locally via WebAssembly without storing raw webcam video.",
+      "Structured Performance Dossier: Summarizes problem-solving clarity, technical correctness, and pacing.",
+      "User Accounts & History: Supabase auth and database for saving interview records, scores, and practice progress."
     ],
     challenges: [
-      "Running client-side OpenCV in WebAssembly without video stream lag.",
-      "Conditioning prompt pipelines for objective, consistent technical grading."
+      "Compiling and running OpenCV in WebAssembly smoothly alongside the React component render loop.",
+      "Structuring prompt chains to deliver consistent, constructive code evaluation rather than generic praise."
     ],
     results: [
-      "Recognized in the CIE MLRIT / IIC Innovation Challenge 2026.",
-      "Live production deployment on Vercel."
+      "Selected as an innovation project in the CIE MLRIT / IIC Innovation Challenge 2026.",
+      "Deployed and accessible live on Vercel."
     ],
     links: {
       github: "https://github.com/Premsai626/ORBIT",
@@ -93,36 +92,36 @@ export const projects: Project[] = [
   {
     id: "vibetune-ai",
     name: "VibeTune",
-    tagline: "AI Mood-Based Music Recommendation & Mindfulness Sanctuary",
-    description: "AI mood-music web app combining in-browser facial emotion recognition (face-api.js) with Spotify playlists across 8 languages, weather atmospheres, and 4-7-8 breathwork.",
+    tagline: "AI mood-based music streamer with real-time facial emotion recognition",
+    description: "An interactive music and wellness web application that uses in-browser neural networks to recognize facial expressions, streaming matching Spotify playlists across 8 languages alongside weather themes and guided breathing.",
     category: "AI / ML",
     featured: true,
     technologies: ["JavaScript", "face-api.js", "Spotify Web API", "Supabase", "Chart.js", "Tailwind CSS"],
     gradient: "from-emerald-500/20 via-teal-600/20 to-indigo-600/20",
     accentColor: "#10b981",
     stats: [
-      { label: "Moods", value: "8 States" },
+      { label: "Award", value: "1st Place Winner" },
+      { label: "Emotions", value: "8 Classifiers" },
       { label: "Languages", value: "8 Languages" },
-      { label: "Emotion AI", value: "Real-time" },
     ],
-    overview: "Leverages client-side neural networks via face-api.js to classify emotional expressions and stream matched Spotify playlists. Pairs music with weather visualizers, breathwork, and mood tracking.",
-    problem: "Finding music matching one's exact mood is tedious, and mainstream apps lack integrated mindfulness pacing and mood journaling.",
-    solution: "Responsive web app harmonizing computer vision emotion AI with Spotify playback, Chart.js streak analytics, and Supabase cloud sync.",
+    overview: "Built during Workshop Carnival 2.0 to explore combining computer vision with everyday digital music. VibeTune reads your camera locally to detect how you feel, finds matching music tracks on Spotify, and offers breathing exercises when you're stressed.",
+    problem: "People often don't know what music matches their current mood, and standard streaming playlists don't adapt to how you're actually feeling in the moment.",
+    solution: "Integrated client-side face landmark models (face-api.js) to classify 8 emotional states in real time, mapped to curated Spotify playlists in 8 different Indian and international languages.",
     features: [
-      "8 Emotion Classifiers: Happy, Sad, Anxious, Energetic, Calm, Romantic, Focused, and Frustrated.",
-      "Real-Time Face AI: In-browser classification with face-api.js running locally for privacy.",
-      "Multilingual Spotify Player: Curated playlists across 8 languages.",
-      "Particle Atmospheres: Ambient visualizers with rain, stars, fire embers, and floating particles.",
-      "4-7-8 Breathwork: Interactive breathing pacer for stress relief.",
-      "Mood Journal: 30-day streak tracker with Chart.js analytics backed by Supabase."
+      "8 Emotion Classifiers: Accurately detects Happy, Sad, Anxious, Energetic, Calm, Romantic, Focused, and Frustrated.",
+      "Local Neural Inference: Video frames are processed entirely inside the browser canvas, keeping camera data 100% private.",
+      "Multilingual Music Catalog: Playlists categorized across English, Hindi, Telugu, Tamil, and more.",
+      "Interactive Weather & Ambient Themes: Background particle effects (rain, night sky, embers) matching the music vibe.",
+      "4-7-8 Breathing Guide: Built-in guided breathing animation to help reduce stress and refocus.",
+      "Mood Calendar: Logs daily emotions and listening history to Supabase with visual Chart.js trends."
     ],
     challenges: [
-      "Tuning neural network thresholds for varying lighting without false triggers.",
-      "Managing Spotify iframe embeds with fluid animations and responsive playback."
+      "Handling fluctuating room lighting conditions by normalizing facial brightness before feeding frames to face-api.js.",
+      "Managing responsive Spotify player embeds and seamless background canvas particle rendering on mobile screens."
     ],
     results: [
-      "1st Place Winner in Web Development at Workshop Carnival 2.0 (CIE MLRIT / IIC).",
-      "Fast, privacy-first web application deployed on Vercel."
+      "Won 1st Place in the Web Development Domain at Workshop Carnival 2.0 (CIE MLRIT / IIC).",
+      "Live deployment actively used for demos and music listening on Vercel."
     ],
     links: {
       github: "https://github.com/Premsai626/VIBE_TUNE",
@@ -133,34 +132,33 @@ export const projects: Project[] = [
   {
     id: "intelligent-faq-bot",
     name: "Intelligent FAQ Assistant",
-    tagline: "Semantic Documentation Search & RAG Knowledge Engine",
-    description: "Conversational tool that parses technical documentation, performs vector semantic search, and synthesizes accurate answers with source citations.",
+    tagline: "Semantic documentation search and Q&A engine with verified citations",
+    description: "A developer tool that ingests technical documentation, creates vector embeddings, and answers complex questions in natural language with precise paragraph citations.",
     category: "Full Stack",
     featured: false,
-    technologies: ["TypeScript", "React", "Python", "FastAPI", "Vector Search", "RAG Pipelines"],
+    technologies: ["TypeScript", "React", "Python", "FastAPI", "Vector Embeddings", "RAG Pipeline"],
     gradient: "from-blue-500/20 via-cyan-600/20 to-emerald-600/20",
     accentColor: "#38bdf8",
     stats: [
-      { label: "Accuracy", value: "95%" },
-      { label: "Latency", value: "<300ms" },
-      { label: "Index", value: "Instant" },
+      { label: "Search", value: "Vector RAG" },
+      { label: "Backend", value: "FastAPI" },
+      { label: "Citations", value: "Direct Link" },
     ],
-    overview: "Natural-language documentation assistant replacing keyword search with semantic vector embeddings and verified citations.",
-    problem: "Keyword search in dense technical documentation often fails to capture context or multi-step queries.",
-    solution: "RAG pipeline connecting a React/TypeScript interface to a FastAPI backend with vector embeddings and similarity ranking.",
+    overview: "Built to make navigating dense developer docs easier. Instead of relying on exact keyword matches, this tool understands synonyms and developer context to pinpoint the right section and explain the answer clearly.",
+    problem: "Standard documentation search fails when you don't know the exact keyword or when the answer spans across multiple guides.",
+    solution: "Created a Retrieval-Augmented Generation (RAG) backend using FastAPI and Python to chunk documentation, compute vector embeddings, and return grounded answers with exact source links.",
     features: [
-      "Semantic Retrieval: Vector search understanding technical terminology and context.",
-      "Passage Citations: Direct reference badges citing the source documentation.",
-      "Developer UI: Markdown rendering, syntax-highlighted code blocks, and copy buttons.",
-      "Multi-Turn Memory: Context awareness for conversational follow-up questions.",
-      "Automated Ingestion: Chunking pipeline for Markdown, PDF, and HTML docs."
+      "Semantic Search: Understands the meaning of questions instead of just matching literal strings.",
+      "Verifiable Citations: Every answer includes source badges linking directly to the corresponding documentation page.",
+      "Markdown & Code Support: Formats responses with copyable code snippets, tables, and step-by-step guides.",
+      "Conversational Follow-ups: Remembers previous questions in the session for clarifying multi-part queries."
     ],
     challenges: [
-      "Optimizing document chunking boundaries to preserve code context.",
-      "Preventing hallucinations through strict context guardrails."
+      "Fine-tuning document chunk sizes so code blocks and explanations aren't split mid-sentence.",
+      "Adding strict context validation to ensure the bot only answers from provided documentation."
     ],
     results: [
-      "Fast documentation search delivering citation-backed answers in under 300ms."
+      "Fast and accurate technical search returning answers with clear source attribution."
     ],
     links: {
       github: "",

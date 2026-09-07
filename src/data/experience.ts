@@ -2,24 +2,24 @@ import { ExperienceItem, AchievementItem } from '../types';
 
 /**
  * Centralized Journey and Milestones Data
- * Narrative-driven evolution representing the engineering progression:
- * 1. Foundations: Core Web Designing & UI Crafting
- * 2. Data & Cloud: Supabase Integration & Backend Architecture
- * 3. Full Stack: End-to-End Applications & AI Systems (ORBIT, VibeTune)
- * 4. Continuous Growth: Exploring New Frameworks, Systems & Next-Gen Languages
+ * Narrative-driven evolution representing the developer's engineering progression:
+ * 1. Web Foundations: Core HTML, CSS & Vanilla JS
+ * 2. Supabase Integration: Databases, Auth & Cloud Architecture
+ * 3. Full-Stack & AI: React, TypeScript & Real-Time Models (ORBIT, VibeTune)
+ * 4. Continuous Exploration: New Frameworks, Systems & Embedded IoT
  */
 export const experienceTimeline: ExperienceItem[] = [
   {
     id: "web-foundations",
     title: "Basic Website Designing & UI Foundations",
-    role: "Frontend Design & Interface Crafting",
-    period: "Phase 01 // Genesis & Foundations",
+    role: "Frontend Design & Core Web Layouts",
+    period: "Step 01 — Web Foundations",
     date: "Milestone 1",
     type: "milestone",
-    summary: "Started with core web building blocks: semantic HTML5, CSS3 styling, responsive layouts, and vanilla JavaScript DOM manipulation.",
+    summary: "Started with core web building blocks: semantic HTML5 markup, responsive CSS3 layouts, and vanilla JavaScript DOM manipulation without frameworks.",
     points: [
-      "Built responsive, accessible web pages with custom CSS animations and modern layouts.",
-      "Mastered DOM manipulation, event loops, and asynchronous JavaScript without frameworks."
+      "Built responsive, accessible web layouts with custom CSS animations and grid systems.",
+      "Learned core DOM manipulation, event listeners, and asynchronous JavaScript fundamentals."
     ],
     technologies: ["HTML5", "CSS3", "JavaScript", "Responsive Design", "DOM APIs"],
     accent: "from-blue-500 to-cyan-500"
@@ -28,13 +28,13 @@ export const experienceTimeline: ExperienceItem[] = [
     id: "supabase-backend-integration",
     title: "Supabase Integration & Cloud Architecture",
     role: "Database Systems & Cloud Backend Developer",
-    period: "Phase 02 // Data, Auth & Cloud",
+    period: "Step 02 — Data, Auth & Cloud",
     date: "Milestone 2",
     type: "milestone",
-    summary: "Integrated Supabase for backend infrastructure: PostgreSQL schemas, authentication workflows, and real-time data synchronization.",
+    summary: "Integrated Supabase for real-time backend infrastructure: PostgreSQL relational schemas, authentication workflows, and live data channels.",
     points: [
-      "Designed PostgreSQL tables with Row-Level Security (RLS) for access control.",
-      "Implemented auth pipelines, real-time channels, and cloud storage buckets."
+      "Structured PostgreSQL tables with Row-Level Security (RLS) policies for user data protection.",
+      "Connected client apps to Supabase auth providers, real-time database listeners, and cloud storage."
     ],
     technologies: ["Supabase", "PostgreSQL", "RLS Policies", "SQL", "REST APIs", "Cloud Storage"],
     accent: "from-emerald-500 to-teal-500"
@@ -42,14 +42,14 @@ export const experienceTimeline: ExperienceItem[] = [
   {
     id: "full-stack-ai-systems",
     title: "Full-Stack Development & AI Integration",
-    role: "Full-Stack Software & AI Systems Engineer",
-    period: "Phase 03 // Full-Stack & AI Systems",
+    role: "Full-Stack Software & AI Developer",
+    period: "Step 03 — Full-Stack & AI Systems",
     date: "Milestone 3",
     type: "project",
-    summary: "Engineered full-stack applications combining React/TypeScript frontends with AI models, computer vision, and real-time APIs.",
+    summary: "Built complete full-stack web applications combining React and TypeScript frontends with on-device computer vision and live AI models.",
     points: [
       "Built ORBIT (AI technical interview platform with OpenCV proctoring) and VibeTune (AI mood-music companion).",
-      "Created typed architectures with TypeScript, scalable state management, and automated Vercel CI/CD."
+      "Created typed architectures with TypeScript, scalable state management, and automated Vercel deployments."
     ],
     technologies: ["React", "TypeScript", "Python", "Tailwind CSS", "OpenCV", "face-api.js", "Vercel"],
     accent: "from-cyan-500 to-blue-500"
@@ -58,13 +58,13 @@ export const experienceTimeline: ExperienceItem[] = [
     id: "continuous-learning-evolution",
     title: "Still Learning & Exploring New Frameworks",
     role: "Continuous Learner & Systems Explorer",
-    period: "Phase 04 // Continuous Evolution",
+    period: "Step 04 — Continuous Exploration",
     date: "Ongoing",
     type: "milestone",
-    summary: "Expanding depth in modern frameworks, high-performance languages, embedded IoT (C++/ESP8266), and AI systems.",
+    summary: "Actively expanding depth in modern backend frameworks, systems programming in C++ for robotics, and practical AI integrations.",
     points: [
-      "Exploring Next.js, FastAPI, vector retrieval (RAG), and agentic workflows.",
-      "Built IoT obstacle-avoiding smart cars with async C++ on the ESP8266."
+      "Exploring Next.js, Node.js, FastAPI, and vector retrieval pipelines for technical documentation.",
+      "Built an autonomous obstacle-avoiding smart robot car using asynchronous C++ on the ESP8266."
     ],
     technologies: ["Next.js", "FastAPI", "Vector Search", "C++", "ESP8266", "Embedded IoT", "Python"],
     accent: "from-purple-500 to-indigo-500"
