@@ -128,7 +128,7 @@ export const SkillCard: React.FC<SkillCardProps> = ({
 
         {/* Skill Title & Category */}
         <h4
-          className={`text-base font-bold font-display transition-colors ${
+          className={`text-base font-bold font-sora transition-colors ${
             isContinuousLearningCard
               ? 'text-amber-100 group-hover:text-amber-300'
               : isLearningLevel
@@ -143,7 +143,7 @@ export const SkillCard: React.FC<SkillCardProps> = ({
         </p>
 
         {/* Summary Description */}
-        <p className="text-xs text-slate-400 mt-2.5 leading-relaxed font-normal line-clamp-2 group-hover:line-clamp-none transition-all">
+        <p className="text-xs text-slate-400 mt-2.5 leading-relaxed font-sans font-normal line-clamp-2 group-hover:line-clamp-none transition-all">
           {highlight}
         </p>
       </div>

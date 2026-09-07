@@ -66,14 +66,14 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
       <div className="p-6 sm:p-7 flex-1 flex flex-col justify-between">
         <div>
           {/* Tagline & Title */}
-          <h3 className="text-xl font-bold font-display text-white group-hover:text-sky-400 transition-colors">
+          <h3 className="text-xl font-bold font-heading text-white group-hover:text-sky-400 transition-colors">
             {project.name}
           </h3>
           <p className="text-xs font-mono text-sky-400 mt-1 font-semibold">
             {project.tagline}
           </p>
 
-          <p className="text-xs sm:text-sm text-slate-400 mt-3 leading-relaxed font-normal line-clamp-3">
+          <p className="text-xs sm:text-sm text-slate-400 mt-3 leading-relaxed font-sans font-normal line-clamp-3">
             {project.description}
           </p>
 

@@ -40,6 +40,7 @@ export const Projects: React.FC = () => {
           title="Featured projects &"
           highlight="hands-on builds."
           subtitle="A selection of full-stack platforms, machine learning applications, and embedded hardware projects I've built."
+          titleFont="font-heading"
         />
 
         {/* Category Filters */}
@@ -51,7 +52,7 @@ export const Projects: React.FC = () => {
                 <button
                   key={cat}
                   onClick={() => setSelectedFilter(cat)}
-                  className={`px-4 py-2 rounded-xl text-xs font-semibold transition-all duration-300 ${
+                  className={`px-4 py-2 rounded-xl text-xs font-semibold font-heading transition-all duration-300 ${
                     isActive
                       ? 'bg-gradient-to-r from-sky-600 via-blue-600 to-indigo-600 text-white shadow-md shadow-sky-600/30 border border-sky-400/40'
                       : 'text-slate-400 hover:text-white hover:bg-slate-800/80'
@@ -112,7 +113,7 @@ export const Projects: React.FC = () => {
                       Flagship Initiative
                     </span>
                   </div>
-                  <h4 className="text-xl font-bold font-display text-white mt-1">
+                  <h4 className="text-xl font-bold font-heading text-white mt-1">
                     {activeProjectModal.tagline}
                   </h4>
                 </div>
@@ -133,7 +134,7 @@ export const Projects: React.FC = () => {
                         setActiveProjectModal(null);
                         setIsRobotSimulatorOpen(true);
                       }}
-                      className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl text-xs font-semibold bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-white shadow-lg shadow-emerald-500/30 transition-all cursor-pointer"
+                      className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl text-xs font-semibold font-heading bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-white shadow-lg shadow-emerald-500/30 transition-all cursor-pointer"
                     >
                       <Radio className="w-4 h-4" />
                       <span>Launch Interactive Simulator</span>
@@ -154,21 +155,21 @@ export const Projects: React.FC = () => {
               {/* Overview & Problem / Solution Grid */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="p-5 rounded-2xl bg-slate-900/80 border border-slate-800 shadow-md">
-                  <div className="flex items-center gap-2 text-rose-400 text-sm font-bold font-display mb-2">
+                  <div className="flex items-center gap-2 text-rose-400 text-sm font-bold font-heading mb-2">
                     <AlertCircle className="w-4 h-4" />
                     <span>The Problem</span>
                   </div>
-                  <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-normal">
+                  <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-sans font-normal">
                     {activeProjectModal.problem}
                   </p>
                 </div>
 
                 <div className="p-5 rounded-2xl bg-slate-900/80 border border-slate-800 shadow-md">
-                  <div className="flex items-center gap-2 text-emerald-400 text-sm font-bold font-display mb-2">
+                  <div className="flex items-center gap-2 text-emerald-400 text-sm font-bold font-heading mb-2">
                     <CheckCircle2 className="w-4 h-4" />
                     <span>The Solution</span>
                   </div>
-                  <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-normal">
+                  <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-sans font-normal">
                     {activeProjectModal.solution}
                   </p>
                 </div>
@@ -176,7 +177,7 @@ export const Projects: React.FC = () => {
 
               {/* Key Features */}
               <div className="space-y-3">
-                <h5 className="text-sm font-bold font-display uppercase tracking-wider text-sky-400 flex items-center gap-2">
+                <h5 className="text-sm font-bold font-heading uppercase tracking-wider text-sky-400 flex items-center gap-2">
                   <Sparkles className="w-4 h-4 text-sky-400" />
                   <span>Key Features</span>
                 </h5>
@@ -184,7 +185,7 @@ export const Projects: React.FC = () => {
                   {activeProjectModal.features.map((feat, idx) => (
                     <div
                       key={idx}
-                      className="p-3.5 rounded-xl bg-slate-900/80 border border-slate-800 flex items-start gap-2.5 text-xs text-slate-300 font-medium"
+                      className="p-3.5 rounded-xl bg-slate-900/80 border border-slate-800 flex items-start gap-2.5 text-xs text-slate-300 font-medium font-sans"
                     >
                       <div className="w-1.5 h-1.5 rounded-full bg-sky-400 mt-1.5 shrink-0" />
                       <span>{feat}</span>
@@ -196,7 +197,7 @@ export const Projects: React.FC = () => {
               {/* Challenges & Results */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-3">
-                  <h5 className="text-sm font-bold font-display uppercase tracking-wider text-amber-400 flex items-center gap-2">
+                  <h5 className="text-sm font-bold font-heading uppercase tracking-wider text-amber-400 flex items-center gap-2">
                     <Activity className="w-4 h-4 text-amber-400" />
                     <span>Technical Challenges</span>
                   </h5>
@@ -204,7 +205,7 @@ export const Projects: React.FC = () => {
                     {activeProjectModal.challenges.map((c, i) => (
                       <div
                         key={i}
-                        className="p-3 rounded-xl bg-slate-900/80 border border-slate-800 text-xs text-slate-300 leading-relaxed"
+                        className="p-3 rounded-xl bg-slate-900/80 border border-slate-800 text-xs text-slate-300 leading-relaxed font-sans"
                       >
                         • {c}
                       </div>
@@ -213,7 +214,7 @@ export const Projects: React.FC = () => {
                 </div>
 
                 <div className="space-y-3">
-                  <h5 className="text-sm font-bold font-display uppercase tracking-wider text-emerald-400 flex items-center gap-2">
+                  <h5 className="text-sm font-bold font-heading uppercase tracking-wider text-emerald-400 flex items-center gap-2">
                     <Sparkles className="w-4 h-4 text-emerald-400" />
                     <span>Results & Outcomes</span>
                   </h5>
@@ -221,7 +222,7 @@ export const Projects: React.FC = () => {
                     {activeProjectModal.results.map((r, i) => (
                       <div
                         key={i}
-                        className="p-3 rounded-xl bg-slate-900/80 border border-slate-800 text-xs text-slate-300 leading-relaxed"
+                        className="p-3 rounded-xl bg-slate-900/80 border border-slate-800 text-xs text-slate-300 leading-relaxed font-sans"
                       >
                         ✓ {r}
                       </div>

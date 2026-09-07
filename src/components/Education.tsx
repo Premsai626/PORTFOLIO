@@ -31,6 +31,7 @@ export const Education: React.FC = () => {
           title="Academic foundation in"
           highlight="computer science & AI."
           subtitle="Combining university coursework in core computer science with hands-on software development and project building."
+          titleFont="font-outfit"
         />
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
@@ -53,19 +54,19 @@ export const Education: React.FC = () => {
                       <span className="text-xs font-mono uppercase tracking-widest text-slate-400 font-semibold">
                         Undergraduate Degree
                       </span>
-                      <h3 className="text-2xl sm:text-3xl font-bold font-display text-white mt-1">
+                      <h3 className="text-2xl sm:text-3xl font-bold font-outfit text-white mt-1">
                         {profile.education.degree}
                       </h3>
                       <p className="text-sm font-mono text-sky-400 mt-1 font-semibold">
                         {profile.education.specialization}
                       </p>
-                      <p className="text-base text-slate-300 mt-3 font-medium flex items-center gap-2">
+                      <p className="text-base text-slate-300 mt-3 font-medium font-outfit flex items-center gap-2">
                         <span>🏛️</span>
                         <span>{profile.education.institution}</span>
                       </p>
                     </div>
 
-                    <p className="text-xs sm:text-sm text-slate-400 leading-relaxed font-normal">
+                    <p className="text-xs sm:text-sm text-slate-400 leading-relaxed font-sans font-normal">
                       Four-year undergraduate program focusing on data structures, algorithms, machine learning, systems architecture, and database engineering.
                     </p>
                   </div>
@@ -79,7 +80,7 @@ export const Education: React.FC = () => {
                     ].map((highlight, idx) => (
                       <div
                         key={idx}
-                        className="flex items-center gap-2.5 text-xs text-slate-300 font-medium"
+                        className="flex items-center gap-2.5 text-xs text-slate-300 font-medium font-sans"
                       >
                         <CheckCircle className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
                         <span>{highlight}</span>
@@ -102,7 +103,7 @@ export const Education: React.FC = () => {
                         <BookOpen className="w-5 h-5" />
                       </div>
                       <div>
-                        <h4 className="text-lg font-bold font-display text-white">
+                        <h4 className="text-lg font-bold font-sora text-white">
                           Key Academic Coursework
                         </h4>
                         <p className="text-xs font-mono text-slate-400 font-medium">
@@ -117,7 +118,7 @@ export const Education: React.FC = () => {
                           key={i}
                           className="p-3.5 rounded-2xl bg-slate-950/60 border border-slate-800 hover:border-sky-500/40 hover:bg-slate-900 transition-all flex flex-col justify-between group shadow-xs"
                         >
-                          <span className="text-xs font-bold text-slate-200 group-hover:text-sky-400 transition-colors">
+                          <span className="text-xs font-bold font-sora text-slate-200 group-hover:text-sky-400 transition-colors">
                             {course.name}
                           </span>
                           <span className="text-[10px] font-mono text-slate-400 mt-2 font-medium">

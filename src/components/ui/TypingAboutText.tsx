@@ -14,19 +14,19 @@ interface ParagraphData {
 
 const PARAGRAPHS: ParagraphData[] = [
   {
-    className: 'text-slate-300 leading-relaxed font-normal text-base sm:text-lg',
+    className: 'text-slate-300 leading-relaxed font-outfit font-normal text-base sm:text-lg',
     segments: [
       { text: 'I am a computer science student specializing in ' },
       {
         text: 'AI & Machine Learning (CSM)',
         highlight: true,
-        className: 'text-sky-300 font-semibold bg-sky-500/10 px-1 py-0.5 rounded border border-sky-500/20',
+        className: 'text-sky-300 font-semibold bg-sky-500/10 px-1 py-0.5 rounded border border-sky-500/20 font-outfit',
       },
       { text: ' at ' },
       {
         text: 'MLRIT',
         highlight: true,
-        className: 'text-indigo-300 font-semibold bg-indigo-500/10 px-1 py-0.5 rounded border border-indigo-500/20',
+        className: 'text-indigo-300 font-semibold bg-indigo-500/10 px-1 py-0.5 rounded border border-indigo-500/20 font-outfit',
       },
       {
         text: ', building ',
@@ -34,43 +34,43 @@ const PARAGRAPHS: ParagraphData[] = [
       {
         text: 'full-stack web apps',
         highlight: true,
-        className: 'text-cyan-300 font-medium',
+        className: 'text-cyan-300 font-medium font-outfit',
       },
       { text: ', ' },
       {
         text: 'AI systems',
         highlight: true,
-        className: 'text-sky-300 font-medium',
+        className: 'text-sky-300 font-medium font-outfit',
       },
       { text: ', and ' },
       {
         text: 'IoT robotics',
         highlight: true,
-        className: 'text-emerald-300 font-medium',
+        className: 'text-emerald-300 font-medium font-outfit',
       },
       { text: '.' },
     ],
   },
   {
-    className: 'text-slate-400 leading-relaxed font-normal text-sm sm:text-base',
+    className: 'text-slate-400 leading-relaxed font-outfit font-normal text-sm sm:text-base',
     segments: [
       { text: 'Key projects: ' },
       {
         text: 'Obstacle-Avoiding Wi-Fi Robot',
         highlight: true,
-        className: 'text-cyan-300 font-semibold',
+        className: 'text-cyan-300 font-semibold font-outfit',
       },
       { text: ', ' },
       {
         text: 'ORBIT',
         highlight: true,
-        className: 'text-indigo-300 font-semibold underline decoration-indigo-400/50 underline-offset-2',
+        className: 'text-indigo-300 font-semibold underline decoration-indigo-400/50 underline-offset-2 font-outfit',
       },
       { text: ' (AI interview platform), and ' },
       {
         text: 'VibeTune',
         highlight: true,
-        className: 'text-emerald-300 font-semibold underline decoration-emerald-400/50 underline-offset-2',
+        className: 'text-emerald-300 font-semibold underline decoration-emerald-400/50 underline-offset-2 font-outfit',
       },
       { text: ' (AI mood music app).' },
     ],

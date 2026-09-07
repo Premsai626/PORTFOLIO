@@ -35,7 +35,12 @@ export default {
       fontFamily: {
         sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
         display: ['Space Grotesk', 'Inter', 'sans-serif'],
+        heading: ['Plus Jakarta Sans', 'sans-serif'],
+        outfit: ['Outfit', 'sans-serif'],
+        sora: ['Sora', 'sans-serif'],
         mono: ['JetBrains Mono', 'Fira Code', 'monospace'],
+        vibes: ['"Great Vibes"', 'cursive'],
+        script: ['"Dancing Script"', '"Alex Brush"', '"Satisfy"', 'cursive'],
       },
       animation: {
         'pulse-slow': 'pulse 8s cubic-bezier(0.4, 0, 0.6, 1) infinite',

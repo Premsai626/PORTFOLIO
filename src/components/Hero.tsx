@@ -164,12 +164,12 @@ export const Hero: React.FC<HeroProps> = ({ onOpenExecutiveBrief }) => {
                   <span className="text-xs sm:text-sm uppercase tracking-[0.25em] font-mono text-slate-400 font-semibold block">
                     Software Engineer & Student
                   </span>
-                  <FadeName firstName="PREM" lastName="SAI" />
+                  <FadeName firstName="Prem" lastName="Sai" />
                 </div>
 
                 {/* Subtitle with Fade Display Transition (type=fade) */}
                 <div className="h-12 sm:h-14 flex items-center">
-                  <div className="flex items-center gap-2.5 text-xl sm:text-2xl md:text-3xl font-bold font-display text-slate-100">
+                  <div className="flex items-center gap-2.5 text-xl sm:text-2xl md:text-3xl font-bold font-heading text-slate-100">
                     <span className="text-sky-400 text-lg">◈</span>
                     <FadeTextRotator
                       texts={[
@@ -180,13 +180,13 @@ export const Hero: React.FC<HeroProps> = ({ onOpenExecutiveBrief }) => {
                       ]}
                       intervalMs={3800}
                       fadeDurationMs={550}
-                      gradientClassName="bg-gradient-to-r from-white via-sky-200 to-cyan-300 bg-clip-text text-transparent font-bold"
+                      gradientClassName="bg-gradient-to-r from-white via-sky-200 to-cyan-300 bg-clip-text text-transparent font-bold font-heading"
                     />
                   </div>
                 </div>
 
                 {/* Hero Bio Pitch */}
-                <p className="text-sm sm:text-base md:text-lg text-slate-300 max-w-xl leading-relaxed font-normal">
+                <p className="text-sm sm:text-base md:text-lg text-slate-300 max-w-xl leading-relaxed font-sans font-normal">
                   {profile.headline}
                 </p>
 

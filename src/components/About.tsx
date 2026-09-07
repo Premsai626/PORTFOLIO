@@ -23,6 +23,7 @@ export const About: React.FC = () => {
           title="Building software with"
           highlight="clarity, purpose & curiosity."
           subtitle="A look into my background, technical focus, and how I approach engineering problems."
+          titleFont="font-outfit"
         />
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
@@ -44,7 +45,7 @@ export const About: React.FC = () => {
                         <span className="absolute -bottom-0.5 -right-0.5 w-3 h-3 rounded-full bg-emerald-400 ring-2 ring-slate-950 animate-pulse" />
                       </div>
                       <div>
-                        <h3 className="text-xl sm:text-2xl font-bold font-display text-white">
+                        <h3 className="text-xl sm:text-2xl font-bold font-outfit text-white">
                           About Me
                         </h3>
                         <p className="text-xs font-mono text-sky-400 font-semibold mt-0.5">
@@ -87,10 +88,10 @@ export const About: React.FC = () => {
                             {pillar.icon}
                           </div>
                           <div>
-                            <h4 className="text-xs font-bold text-white">
+                            <h4 className="text-xs font-bold font-heading text-white">
                               {pillar.title}
                             </h4>
-                            <p className="text-[11px] text-slate-400 mt-0.5 font-medium">
+                            <p className="text-[11px] font-sans text-slate-400 mt-0.5 font-medium">
                               {pillar.desc}
                             </p>
                           </div>

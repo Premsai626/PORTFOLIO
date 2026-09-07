@@ -132,6 +132,7 @@ export const Contact: React.FC = () => {
           title="Let's connect and"
           highlight="build something great."
           subtitle="Open to internships, software engineering opportunities, AI research collaborations, and technical discussions."
+          titleFont="font-heading"
         />
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
@@ -146,11 +147,11 @@ export const Contact: React.FC = () => {
                       <span>Open to Opportunities</span>
                     </div>
 
-                    <h3 className="text-2xl sm:text-3xl font-bold font-display text-white">
+                    <h3 className="text-2xl sm:text-3xl font-bold font-heading text-white">
                       Have an opportunity or project in mind?
                     </h3>
 
-                    <p className="text-sm text-slate-400 leading-relaxed font-normal">
+                    <p className="text-sm text-slate-400 leading-relaxed font-sans font-normal">
                       Whether you are looking for an engineer to build a web application, collaborate on an AI or IoT project, or discuss technical ideas, I&apos;d love to connect.
                     </p>
 
@@ -266,7 +267,7 @@ export const Contact: React.FC = () => {
                     <div className="flex items-center justify-between gap-2 mb-6">
                       <div className="flex items-center gap-2">
                         <MessageSquare className="w-5 h-5 text-sky-400" />
-                        <h4 className="text-lg font-bold font-display text-white">
+                        <h4 className="text-lg font-bold font-heading text-white">
                           Send a Direct Message
                         </h4>
                       </div>
@@ -280,17 +281,17 @@ export const Contact: React.FC = () => {
                         <div className="w-14 h-14 rounded-full bg-emerald-900/80 text-emerald-400 flex items-center justify-center mx-auto shadow-lg shadow-emerald-500/20">
                           <CheckCircle2 className="w-7 h-7" />
                         </div>
-                        <h5 className="text-xl font-bold font-display text-white">
+                        <h5 className="text-xl font-bold font-heading text-white">
                           Message Dispatched to Prem Sai!
                         </h5>
-                        <p className="text-xs sm:text-sm text-slate-300 max-w-md mx-auto leading-relaxed font-medium">
+                        <p className="text-xs sm:text-sm text-slate-300 max-w-md mx-auto leading-relaxed font-sans font-medium">
                           Thank you for reaching out. Your message has been forwarded directly to{' '}
                           <span className="text-sky-300 font-mono font-semibold">{targetEmail}</span>. I will review it and reply as soon as possible.
                         </p>
                         <div className="pt-2">
                           <button
                             onClick={() => setStatus('idle')}
-                            className="px-5 py-2.5 rounded-xl text-xs font-semibold bg-emerald-600 hover:bg-emerald-500 text-white shadow-md shadow-emerald-600/30 transition-all cursor-pointer"
+                            className="px-5 py-2.5 rounded-xl text-xs font-semibold font-heading bg-emerald-600 hover:bg-emerald-500 text-white shadow-md shadow-emerald-600/30 transition-all cursor-pointer"
                           >
                             Send Another Message
                           </button>

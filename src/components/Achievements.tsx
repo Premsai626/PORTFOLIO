@@ -50,6 +50,7 @@ export const Achievements: React.FC = () => {
           title="Verified certificates, hackathons &"
           highlight="technical honors."
           subtitle="Official credentials, academic competition awards, and specialized technical certifications across software, AI, databases, and engineering design."
+          titleFont="font-heading"
         />
 
         {/* Category Filter Tabs */}
@@ -66,7 +67,7 @@ export const Achievements: React.FC = () => {
               <button
                 key={cat.id}
                 onClick={() => setActiveCategory(cat.id)}
-                className={`inline-flex items-center gap-2 px-4 py-2 rounded-2xl text-xs sm:text-sm font-medium transition-all duration-300 ${
+                className={`inline-flex items-center gap-2 px-4 py-2 rounded-2xl text-xs sm:text-sm font-medium font-heading transition-all duration-300 ${
                   isActive
                     ? 'bg-gradient-to-r from-sky-500 to-indigo-600 text-white shadow-lg shadow-sky-500/25 border border-sky-400/40 scale-105'
                     : 'bg-slate-900/80 hover:bg-slate-800 text-slate-300 hover:text-white border border-slate-800/90 backdrop-blur-xl'
@@ -131,7 +132,7 @@ export const Achievements: React.FC = () => {
                       </span>
                     </div>
 
-                    <h4 className="text-base sm:text-lg font-bold font-display text-white group-hover:text-sky-300 transition-colors leading-snug">
+                    <h4 className="text-base sm:text-lg font-bold font-heading text-white group-hover:text-sky-300 transition-colors leading-snug">
                       {item.title}
                     </h4>
 
@@ -170,7 +171,7 @@ export const Achievements: React.FC = () => {
                       </div>
                     )}
 
-                    <p className="text-xs text-slate-300 mt-3 leading-relaxed font-normal line-clamp-3">
+                    <p className="text-xs text-slate-300 mt-3 leading-relaxed font-sans font-normal line-clamp-3">
                       {item.description}
                     </p>
 

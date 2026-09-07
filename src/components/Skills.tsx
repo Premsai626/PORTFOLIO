@@ -33,6 +33,7 @@ export const Skills: React.FC = () => {
           title="Languages, frameworks &"
           highlight="tools I use."
           subtitle="A comprehensive overview of the technologies, frameworks, and developer tools I work with across web and embedded systems."
+          titleFont="font-sora"
         />
 
         {/* Filter Navigation Tabs */}
@@ -44,7 +45,7 @@ export const Skills: React.FC = () => {
                 <button
                   key={cat.id}
                   onClick={() => setSelectedCategory(cat.id)}
-                  className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-semibold transition-all duration-300 ${
+                  className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-semibold font-sora transition-all duration-300 ${
                     isActive
                       ? 'bg-gradient-to-r from-sky-600 via-blue-600 to-indigo-600 text-white shadow-md shadow-sky-600/30 border border-sky-400/40'
                       : 'text-slate-400 hover:text-white hover:bg-slate-800/80'
