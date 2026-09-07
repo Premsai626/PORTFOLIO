@@ -15,7 +15,6 @@ import { DeveloperConsole } from '@/components/ui/DeveloperConsole';
 import { IntroScreen } from '@/components/IntroScreen';
 import { ExecutiveBrief } from '@/components/ExecutiveBrief';
 import { ScrollProgressBar } from '@/components/ui/ScrollProgressBar';
-import { FloatingScrollIndicator } from '@/components/ui/FloatingScrollIndicator';
 import { ScrollVelocityMarquee } from '@/components/ui/ScrollVelocityMarquee';
 
 export const App: React.FC = () => {
@@ -26,9 +25,6 @@ export const App: React.FC = () => {
     <div className="relative min-h-screen bg-[#030712] text-slate-100 selection:bg-cyan-500/30 selection:text-cyan-200">
       {/* Scroll Progress Bar at very top */}
       <ScrollProgressBar />
-
-      {/* Floating Vertical Radar Section Navigation */}
-      <FloatingScrollIndicator />
 
       {/* Intro Landing Splash & Diagnostic Boot Screen */}
       {showIntro && <IntroScreen onEnter={() => setShowIntro(false)} />}
