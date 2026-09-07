@@ -11,22 +11,17 @@ import { Footer } from '@/components/Footer';
 import { AnimatedBackground } from '@/components/ui/AnimatedBackground';
 import { CustomCursor } from '@/components/ui/CustomCursor';
 import { DeveloperConsole } from '@/components/ui/DeveloperConsole';
-import { IntroScreen } from '@/components/IntroScreen';
 import { ExecutiveBrief } from '@/components/ExecutiveBrief';
 import { ScrollProgressBar } from '@/components/ui/ScrollProgressBar';
 import { ScrollVelocityMarquee } from '@/components/ui/ScrollVelocityMarquee';
 
 export const App: React.FC = () => {
-  const [showIntro, setShowIntro] = useState(true);
   const [showExecutiveBrief, setShowExecutiveBrief] = useState(false);
 
   return (
     <div className="relative min-h-screen bg-[#030712] text-slate-100 selection:bg-cyan-500/30 selection:text-cyan-200">
       {/* Scroll Progress Bar at very top */}
       <ScrollProgressBar />
-
-      {/* Intro Landing Splash & Diagnostic Boot Screen */}
-      {showIntro && <IntroScreen onEnter={() => setShowIntro(false)} />}
 
       {/* Recruiter & Executive Brief Modal */}
       <ExecutiveBrief
