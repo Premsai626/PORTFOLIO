@@ -1,145 +1,107 @@
 import { SkillCategory } from '../types';
 
 /**
- * Centralized Skills Ecosystem
- * Curated to exactly 2 prominent skills per section.
+ * Technical Skills Ecosystem
+ * Focus skills: Python, Java, C, HTML, CSS, VS Code, Git, Supabase, Vercel
  */
 export const skillCategories: SkillCategory[] = [
   {
     id: "programming",
     name: "Programming",
-    description: "Languages for core logic, algorithms, and backend services.",
+    description: "Core languages for logic, data structures, and algorithm engineering.",
     skills: [
       {
         name: "Python",
         level: "Strong",
-        highlight: "FastAPI, automation scripting, algorithms",
+        highlight: "Scripting, algorithmic problem solving, automation, and backend logic",
         category: "Programming",
         iconKey: "python",
-        technologies: ["FastAPI", "NumPy", "Pandas", "Automation", "REST APIs"]
+        technologies: ["Automation", "Data Structures", "Algorithms", "APIs"]
       },
       {
-        name: "TypeScript",
-        level: "Strong",
-        highlight: "Type safety, interfaces, scalable state models",
+        name: "Java",
+        level: "Proficient",
+        highlight: "Object-oriented software development, core data structures, and algorithms",
         category: "Programming",
-        iconKey: "typescript",
-        technologies: ["Generics", "Type Inference", "Interfaces", "Strict Mode"]
+        iconKey: "java",
+        technologies: ["OOP", "Collections", "Multithreading", "Algorithms"]
+      },
+      {
+        name: "C Language",
+        level: "Proficient",
+        highlight: "Procedural programming, memory management, pointers, and systems fundamentals",
+        category: "Programming",
+        iconKey: "c",
+        technologies: ["Pointers", "Memory Management", "Data Structures", "Algorithms"]
       }
     ]
   },
   {
     id: "web-development",
     name: "Web Development",
-    description: "Modern, responsive, and accessible user interfaces.",
+    description: "Modern, responsive, and semantic web interfaces.",
     skills: [
       {
-        name: "React",
+        name: "HTML",
         level: "Strong",
-        highlight: "Custom hooks, component design, performance",
-        category: "Web Development",
-        iconKey: "react",
-        technologies: ["Hooks", "Context API", "Vite", "Components"]
-      },
-      {
-        name: "HTML5 & Modern CSS",
-        level: "Proficient",
-        highlight: "Semantic markup, Flexbox, Grid, keyframe animations",
+        highlight: "Semantic markup, accessible structure, SEO standards, and modern DOM APIs",
         category: "Web Development",
         iconKey: "html",
-        technologies: ["Semantic HTML", "CSS Grid", "Flexbox", "Responsive"]
+        technologies: ["Semantic HTML5", "Accessibility", "Forms", "DOM"]
+      },
+      {
+        name: "CSS",
+        level: "Strong",
+        highlight: "Responsive layouts, Flexbox, Grid, animations, and custom styling",
+        category: "Web Development",
+        iconKey: "css",
+        technologies: ["CSS3", "Flexbox", "Grid", "Keyframe Animations", "Media Queries"]
       }
     ]
   },
   {
-    id: "backend-database",
-    name: "Backend & Database",
-    description: "Databases, cloud services, and RESTful APIs.",
+    id: "backend-cloud",
+    name: "Backend & Cloud",
+    description: "Database storage, authentication, and continuous deployment workflows.",
     skills: [
-      {
-        name: "MongoDB",
-        level: "Proficient",
-        highlight: "NoSQL document modeling, aggregation queries",
-        category: "Backend & Database",
-        iconKey: "mongodb",
-        technologies: ["Aggregation", "BSON", "Atlas", "Indexes"]
-      },
       {
         name: "Supabase",
         level: "Proficient",
-        highlight: "PostgreSQL, Row Level Security, Auth, Realtime",
-        category: "Backend & Database",
+        highlight: "PostgreSQL relational databases, Row Level Security policies, and authentication",
+        category: "Backend & Cloud",
         iconKey: "supabase",
-        technologies: ["PostgreSQL", "RLS Policies", "Auth", "Storage"]
-      }
-    ]
-  },
-  {
-    id: "iot-hardware",
-    name: "IoT & Hardware",
-    description: "Microcontroller systems, telemetry, and smart robotics.",
-    skills: [
-      {
-        name: "IoT & Embedded Systems",
-        level: "Proficient",
-        highlight: "ESP8266, microcontroller circuits, Wi-Fi teleoperation",
-        category: "IoT & Hardware",
-        iconKey: "iot",
-        technologies: ["ESP8266", "Embedded C++", "PWM Drivers", "Microcontrollers"]
+        technologies: ["PostgreSQL", "RLS Policies", "Auth", "Realtime DB"]
       },
       {
-        name: "Sensors & Robotics Hardware",
+        name: "Vercel",
         level: "Proficient",
-        highlight: "Ultrasonic telemetry, motor drivers, sensor circuits",
-        category: "IoT & Hardware",
-        iconKey: "iot",
-        technologies: ["HC-SR04", "L298N Driver", "Telemetry", "Actuators"]
+        highlight: "Automated Git deployments, edge hosting, domain management, and production builds",
+        category: "Backend & Cloud",
+        iconKey: "vercel",
+        technologies: ["Edge Hosting", "CI/CD Deployment", "SSL", "Production Builds"]
       }
     ]
   },
   {
     id: "tools",
     name: "Tools & Workflow",
-    description: "Developer tooling, version control, and design platforms.",
+    description: "Developer tooling, version control, and IDE workflows.",
     skills: [
       {
-        name: "Git & GitHub",
+        name: "Git",
         level: "Strong",
-        highlight: "Branching workflows, version control, CI/CD, pull requests",
+        highlight: "Version control, commit hygiene, branch management, and remote repository syncing",
         category: "Tools & Workflow",
         iconKey: "git",
-        technologies: ["Branching", "Commits", "Pull Requests", "Code Reviews"]
+        technologies: ["Version Control", "Branching", "Pull Requests", "GitHub"]
       },
       {
-        name: "VS Code & Tooling",
-        level: "Proficient",
-        highlight: "Debugging, extensions, TypeScript dev workflows",
+        name: "VS Code",
+        level: "Strong",
+        highlight: "IDE customization, debugger integration, extensions, and automated formatting",
         category: "Tools & Workflow",
         iconKey: "vscode",
-        technologies: ["Debugging", "Linting", "Prettier", "Git Integration"]
-      }
-    ]
-  },
-  {
-    id: "learning",
-    name: "Learning Skills",
-    description: "Frameworks, tools, and technologies currently being explored.",
-    skills: [
-      {
-        name: "Node.js & REST APIs",
-        level: "Learning",
-        highlight: "Runtime backend scripts, Express routing, HTTP endpoints",
-        category: "Learning Skills",
-        iconKey: "nodejs",
-        technologies: ["Node.js", "Express", "REST APIs", "Postman"]
-      },
-      {
-        name: "Still Learning New Skills",
-        level: "Always Active",
-        highlight: "Exploring Next.js, Docker, cloud tools, and system architecture",
-        category: "Learning Skills",
-        iconKey: "learning",
-        technologies: ["Next.js", "Docker", "DevOps", "System Design"]
+        technologies: ["Debugging", "Extensions", "Linters", "Terminal Integration"]
       }
     ]
   }

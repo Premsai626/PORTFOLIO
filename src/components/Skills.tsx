@@ -4,19 +4,17 @@ import { SectionHeading } from '@/components/ui/SectionHeading';
 import { SkillCard } from '@/components/ui/SkillCard';
 import { RevealOnScroll } from '@/components/ui/RevealOnScroll';
 import { TiltCard } from '@/components/ui/TiltCard';
-import { Sparkles, Code2, Layers, Database, Boxes, Wrench, Compass } from 'lucide-react';
+import { Sparkles, Code2, Layers, Database, Wrench } from 'lucide-react';
 
 export const Skills: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
 
   const categories = [
-    { id: 'all', name: 'All Ecosystem', icon: <Sparkles className="w-3.5 h-3.5" /> },
+    { id: 'all', name: 'All Skills', icon: <Sparkles className="w-3.5 h-3.5" /> },
     { id: 'programming', name: 'Programming', icon: <Code2 className="w-3.5 h-3.5" /> },
     { id: 'web-development', name: 'Web Dev', icon: <Layers className="w-3.5 h-3.5" /> },
-    { id: 'backend-database', name: 'Backend & DB', icon: <Database className="w-3.5 h-3.5" /> },
-    { id: 'iot-hardware', name: 'IoT & Hardware', icon: <Boxes className="w-3.5 h-3.5" /> },
-    { id: 'tools', name: 'Tools', icon: <Wrench className="w-3.5 h-3.5" /> },
-    { id: 'learning', name: 'Learning Skills', icon: <Compass className="w-3.5 h-3.5" /> },
+    { id: 'backend-cloud', name: 'Backend & Cloud', icon: <Database className="w-3.5 h-3.5" /> },
+    { id: 'tools', name: 'Tools & Workflow', icon: <Wrench className="w-3.5 h-3.5" /> },
   ];
 
   // Flatten or filter skills

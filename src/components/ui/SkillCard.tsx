@@ -9,7 +9,6 @@ import {
   Globe,
   Sparkles,
   GitBranch,
-  FolderGit2,
   Sliders,
   FileCode,
 } from 'lucide-react';
@@ -24,43 +23,43 @@ export interface SkillCardProps {
 }
 
 const getSkillIcon = (key: string) => {
-  switch (key) {
+  switch (key.toLowerCase()) {
     case 'python':
       return <Code className="w-5 h-5 text-amber-500" />;
     case 'java':
       return <Terminal className="w-5 h-5 text-red-500" />;
+    case 'c':
     case 'cpp':
       return <FileCode className="w-5 h-5 text-blue-500" />;
+    case 'html':
+    case 'html5':
+      return <Layers className="w-5 h-5 text-orange-500" />;
+    case 'css':
+    case 'css3':
+      return <Sliders className="w-5 h-5 text-blue-400" />;
+    case 'vscode':
+    case 'vs code':
+      return <Terminal className="w-5 h-5 text-sky-400" />;
+    case 'git':
+    case 'github':
+      return <GitBranch className="w-5 h-5 text-orange-500" />;
+    case 'supabase':
+      return <Database className="w-5 h-5 text-emerald-400" />;
+    case 'vercel':
+    case 'versel':
+      return <Globe className="w-5 h-5 text-slate-100" />;
     case 'javascript':
       return <Code className="w-5 h-5 text-amber-400" />;
     case 'typescript':
       return <Code className="w-5 h-5 text-sky-500" />;
     case 'react':
       return <Globe className="w-5 h-5 text-sky-400" />;
-    case 'html':
-      return <Layers className="w-5 h-5 text-orange-500" />;
-    case 'css':
-      return <Sliders className="w-5 h-5 text-blue-400" />;
     case 'tailwind':
       return <Sliders className="w-5 h-5 text-cyan-400" />;
     case 'nodejs':
       return <Boxes className="w-5 h-5 text-emerald-400" />;
     case 'mongodb':
       return <Database className="w-5 h-5 text-emerald-500" />;
-    case 'supabase':
-      return <Database className="w-5 h-5 text-emerald-400" />;
-    case 'api':
-      return <Layers className="w-5 h-5 text-indigo-400" />;
-    case 'iot':
-      return <Boxes className="w-5 h-5 text-teal-400" />;
-    case 'git':
-      return <GitBranch className="w-5 h-5 text-orange-500" />;
-    case 'github':
-      return <FolderGit2 className="w-5 h-5 text-slate-300" />;
-    case 'vscode':
-      return <Terminal className="w-5 h-5 text-blue-400" />;
-    case 'figma':
-      return <Sliders className="w-5 h-5 text-pink-400" />;
     case 'learning':
     case 'growth':
       return <Sparkles className="w-5 h-5 text-amber-400 animate-pulse" />;
