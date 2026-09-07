@@ -7,12 +7,11 @@ interface IntroScreenProps {
 
 /**
  * IntroScreen Component
- * Minimal, cinematic handwriting intro screen for Premsai's portfolio:
- * - Ultra-clean dark canvas (#030712) with 30 FPS capped particle animation
- * - "Welcome to Premsai's Portfolio" in Great Vibes script with expanded character spacing
- * - Extended cinematic runtime with fluid cursive ink reveal
- * - Luminous ink-nib tracking point
- * - Automatic smooth dissolve transition into the homepage
+ * Minimal, cinematic handwriting intro screen:
+ * - Line 1: "Initializing ....." with ambient pulse
+ * - Line 2: "Premsai's Portfolio" in Great Vibes cursive with glowing ink reveal
+ * - 30 FPS capped canvas stardust & animation loop
+ * - Automatic smooth dissolve transition into the main homepage
  */
 export const IntroScreen: React.FC<IntroScreenProps> = ({ onComplete }) => {
   const [phase, setPhase] = useState<'writing' | 'hold' | 'fadeout' | 'done'>('writing');
@@ -24,7 +23,7 @@ export const IntroScreen: React.FC<IntroScreenProps> = ({ onComplete }) => {
     typeof window !== 'undefined' &&
     window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  // Handwriting Animation Loop capped with extended cinematic runtime (~4s writing + 1.5s hold)
+  // Handwriting Animation Loop capped at 30 FPS
   useEffect(() => {
     if (prefersReducedMotion) {
       setWriteProgress(100);
@@ -36,9 +35,9 @@ export const IntroScreen: React.FC<IntroScreenProps> = ({ onComplete }) => {
       return () => clearTimeout(holdTimer);
     }
 
-    const startTime = performance.now() + 300; // 300ms ambient pause before ink begins
-    const writeDuration = 4000; // Increased to 4.0 seconds for deliberate handwriting
-    const targetFps = 30; // 30 FPS animation cap
+    const startTime = performance.now() + 300; // 300ms ambient pause
+    const writeDuration = 3800; // ~3.8 seconds writing for deliberate handwriting pace
+    const targetFps = 30; // 30 FPS animation rate
     const fpsInterval = 1000 / targetFps;
     let lastFrameTime = performance.now();
     let animationFrameId: number;
@@ -71,7 +70,7 @@ export const IntroScreen: React.FC<IntroScreenProps> = ({ onComplete }) => {
         setWriteProgress(100);
         setPhase('hold');
 
-        // Extended hold time (1.5 seconds) to view complete signature
+        // Hold for 1.5s so user comfortably sees the completed text
         setTimeout(() => {
           setPhase('fadeout');
 
@@ -105,18 +104,18 @@ export const IntroScreen: React.FC<IntroScreenProps> = ({ onComplete }) => {
     };
     window.addEventListener('resize', handleResize);
 
-    const count = 28; // Subtle particle density
+    const count = 28;
     const particles = Array.from({ length: count }, () => ({
       x: Math.random() * width,
       y: Math.random() * height,
       radius: Math.random() * 1.2 + 0.6,
       vx: (Math.random() - 0.5) * 0.25,
-      vy: (Math.random() - 0.5) * 0.25 - 0.12, // gently float upward
+      vy: (Math.random() - 0.5) * 0.25 - 0.12,
       alpha: Math.random() * 0.35 + 0.15,
       fadeSpeed: (Math.random() * 0.006 + 0.003) * (Math.random() > 0.5 ? 1 : -1),
     }));
 
-    const targetFps = 30; // 30 FPS cap
+    const targetFps = 30;
     const fpsInterval = 1000 / targetFps;
     let lastRenderTime = performance.now();
     let animId: number;
@@ -193,35 +192,47 @@ export const IntroScreen: React.FC<IntroScreenProps> = ({ onComplete }) => {
           className="absolute inset-0 w-full h-full pointer-events-none z-10"
         />
 
-        {/* Center Text Container: "Welcome to Premsai's Portfolio" in Great Vibes */}
-        <div className="relative z-20 flex flex-col items-center justify-center px-6 max-w-7xl mx-auto">
+        {/* Center Container */}
+        <div className="relative z-20 flex flex-col items-center justify-center px-6 max-w-5xl mx-auto space-y-4 sm:space-y-6">
+          {/* Line 1: Initializing ..... */}
+          <motion.div
+            initial={{ opacity: 0, y: -6 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.1 }}
+            className="flex items-center space-x-2"
+          >
+            <span className="font-mono text-xs sm:text-sm md:text-base tracking-[0.25em] sm:tracking-[0.3em] uppercase text-cyan-300/80 drop-shadow-[0_0_12px_rgba(56,189,248,0.5)]">
+              Initializing .....
+            </span>
+          </motion.div>
+
+          {/* Line 2: Premsai's Portfolio */}
           <div className="relative inline-block text-center">
             {/* Ambient Radial Bloom Underlay */}
             <div
-              className="absolute -inset-x-16 -inset-y-10 bg-gradient-to-r from-sky-500/15 via-cyan-400/20 to-indigo-500/15 rounded-full blur-3xl transition-opacity duration-1000 pointer-events-none"
+              className="absolute -inset-x-14 -inset-y-8 bg-gradient-to-r from-sky-500/15 via-cyan-400/20 to-indigo-500/15 rounded-full blur-3xl transition-opacity duration-1000 pointer-events-none"
               style={{
                 opacity: writeProgress > 15 ? 0.8 : 0,
               }}
             />
 
-            {/* Handwriting Text Wrapper with Progressive Reveal Mask & Increased Character Spacing */}
-            <div className="relative py-4 px-6 flex items-center justify-center">
+            {/* Handwriting Reveal with Expanded Spacing */}
+            <div className="relative py-2 px-6 flex items-center justify-center">
               <h1
-                className="font-vibes text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-center leading-[1.3] tracking-[0.07em] sm:tracking-[0.09em] cursor-default select-none whitespace-normal sm:whitespace-nowrap"
+                className="font-vibes text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl text-center leading-[1.25] tracking-[0.08em] sm:tracking-[0.1em] cursor-default select-none whitespace-normal sm:whitespace-nowrap"
                 style={{
                   clipPath: `inset(0 ${100 - writeProgress}% 0 0)`,
                   WebkitClipPath: `inset(0 ${100 - writeProgress}% 0 0)`,
                   transition: 'clip-path 0.04s linear, -webkit-clip-path 0.04s linear',
                 }}
               >
-                {/* Text: Welcome to Premsai's Portfolio with Shimmering Gradient */}
                 <span
                   className="bg-gradient-to-r from-white via-sky-100 to-cyan-200 bg-clip-text text-transparent"
                   style={{
                     filter: 'drop-shadow(0 0 32px rgba(56, 189, 248, 0.45)) drop-shadow(0 2px 10px rgba(255, 255, 255, 0.2))',
                   }}
                 >
-                  Welcome to Premsai's Portfolio
+                  Premsai's Portfolio
                 </span>
               </h1>
 
@@ -234,7 +245,6 @@ export const IntroScreen: React.FC<IntroScreenProps> = ({ onComplete }) => {
                     transform: 'translate(-50%, -50%)',
                   }}
                 >
-                  {/* Glowing Ink Pen Head Spark */}
                   <div className="relative flex items-center justify-center">
                     <div className="w-9 h-9 rounded-full bg-cyan-400/30 blur-md animate-ping" />
                     <div className="absolute w-3 h-3 rounded-full bg-cyan-200 shadow-[0_0_16px_#38bdf8,0_0_26px_#0ea5e9]" />
