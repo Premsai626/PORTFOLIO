@@ -2,7 +2,7 @@ import { SkillCategory } from '../types';
 
 /**
  * Centralized Skills Ecosystem
- * Grouped logically with detailed hover meta, related techs, and icons.
+ * Curated to exactly 2 prominent skills per section.
  */
 export const skillCategories: SkillCategory[] = [
   {
@@ -19,29 +19,13 @@ export const skillCategories: SkillCategory[] = [
         technologies: ["FastAPI", "NumPy", "Pandas", "Automation", "REST APIs"]
       },
       {
-        name: "Java",
-        level: "Proficient",
-        highlight: "OOP, data structures, modular systems",
-        category: "Programming",
-        iconKey: "java",
-        technologies: ["OOP", "Collections", "JVM"]
-      },
-      {
-        name: "C / C++",
-        level: "Solid Foundation",
-        highlight: "Pointers, memory management, embedded C",
-        category: "Programming",
-        iconKey: "cpp",
-        technologies: ["Pointers", "ESP8266", "Embedded C", "Algorithms"]
-      },
-      {
         name: "TypeScript",
         level: "Strong",
         highlight: "Type safety, interfaces, scalable state models",
         category: "Programming",
         iconKey: "typescript",
         technologies: ["Generics", "Type Inference", "Interfaces", "Strict Mode"]
-      },
+      }
     ]
   },
   {
@@ -58,21 +42,13 @@ export const skillCategories: SkillCategory[] = [
         technologies: ["Hooks", "Context API", "Vite", "Components"]
       },
       {
-        name: "HTML5 & Web Standards",
+        name: "HTML5 & Modern CSS",
         level: "Proficient",
-        highlight: "Semantic markup, accessibility, clean structure",
+        highlight: "Semantic markup, Flexbox, Grid, keyframe animations",
         category: "Web Development",
         iconKey: "html",
-        technologies: ["Semantic HTML", "ARIA", "Canvas 2D"]
-      },
-      {
-        name: "CSS3 & Modern Styling",
-        level: "Proficient",
-        highlight: "Flexbox, Grid, keyframe animations, glassmorphism",
-        category: "Web Development",
-        iconKey: "css",
-        technologies: ["Flexbox", "CSS Grid", "Keyframes", "Variables"]
-      },
+        technologies: ["Semantic HTML", "CSS Grid", "Flexbox", "Responsive"]
+      }
     ]
   },
   {
@@ -95,7 +71,7 @@ export const skillCategories: SkillCategory[] = [
         category: "Backend & Database",
         iconKey: "supabase",
         technologies: ["PostgreSQL", "RLS Policies", "Auth", "Storage"]
-      },
+      }
     ]
   },
   {
@@ -106,11 +82,19 @@ export const skillCategories: SkillCategory[] = [
       {
         name: "IoT & Embedded Systems",
         level: "Proficient",
-        highlight: "ESP8266, ultrasonic telemetry, Wi-Fi teleoperation",
+        highlight: "ESP8266, microcontroller circuits, Wi-Fi teleoperation",
         category: "IoT & Hardware",
         iconKey: "iot",
-        technologies: ["ESP8266", "Ultrasonic Sensors", "PWM Drivers", "C++"]
+        technologies: ["ESP8266", "Embedded C++", "PWM Drivers", "Microcontrollers"]
       },
+      {
+        name: "Sensors & Robotics Hardware",
+        level: "Proficient",
+        highlight: "Ultrasonic telemetry, motor drivers, sensor circuits",
+        category: "IoT & Hardware",
+        iconKey: "iot",
+        technologies: ["HC-SR04", "L298N Driver", "Telemetry", "Actuators"]
+      }
     ]
   },
   {
@@ -119,37 +103,21 @@ export const skillCategories: SkillCategory[] = [
     description: "Developer tooling, version control, and design platforms.",
     skills: [
       {
-        name: "Git & Version Control",
+        name: "Git & GitHub",
         level: "Strong",
-        highlight: "Branching, clean commit history, rebasing",
+        highlight: "Branching workflows, version control, CI/CD, pull requests",
         category: "Tools & Workflow",
         iconKey: "git",
-        technologies: ["Branching", "Commits", "Rebase", "Git CLI"]
+        technologies: ["Branching", "Commits", "Pull Requests", "Code Reviews"]
       },
       {
-        name: "GitHub",
-        level: "Strong",
-        highlight: "Repo management, CI/CD workflows, collaboration",
-        category: "Tools & Workflow",
-        iconKey: "github",
-        technologies: ["Pull Requests", "Code Reviews", "Issues", "Pages"]
-      },
-      {
-        name: "VS Code",
+        name: "VS Code & Tooling",
         level: "Proficient",
-        highlight: "Debugging, extensions, TypeScript workflows",
+        highlight: "Debugging, extensions, TypeScript dev workflows",
         category: "Tools & Workflow",
         iconKey: "vscode",
-        technologies: ["Debugging", "Linting", "Prettier"]
-      },
-      {
-        name: "Figma",
-        level: "Proficient",
-        highlight: "Wireframing, prototyping, UI mockups",
-        category: "Tools & Workflow",
-        iconKey: "figma",
-        technologies: ["Wireframing", "UI Layouts", "Prototyping"]
-      },
+        technologies: ["Debugging", "Linting", "Prettier", "Git Integration"]
+      }
     ]
   },
   {
@@ -158,36 +126,12 @@ export const skillCategories: SkillCategory[] = [
     description: "Frameworks, tools, and technologies currently being explored.",
     skills: [
       {
-        name: "JavaScript",
+        name: "Node.js & REST APIs",
         level: "Learning",
-        highlight: "ES6+, async/await, DOM APIs, event loop",
-        category: "Learning Skills",
-        iconKey: "javascript",
-        technologies: ["ES6+", "Async/Await", "DOM", "Fetch API"]
-      },
-      {
-        name: "Tailwind CSS",
-        level: "Learning",
-        highlight: "Utility classes, responsive design, custom themes",
-        category: "Learning Skills",
-        iconKey: "tailwind",
-        technologies: ["Utility Classes", "Flex/Grid", "Dark Mode"]
-      },
-      {
-        name: "Node.js",
-        level: "Learning",
-        highlight: "Runtime environment, Express routing, npm ecosystem",
+        highlight: "Runtime backend scripts, Express routing, HTTP endpoints",
         category: "Learning Skills",
         iconKey: "nodejs",
-        technologies: ["Express", "NPM Scripts", "Backend Scripts"]
-      },
-      {
-        name: "REST APIs",
-        level: "Learning",
-        highlight: "HTTP endpoints, JSON communication, API testing",
-        category: "Learning Skills",
-        iconKey: "api",
-        technologies: ["HTTP Methods", "JSON", "CORS", "Postman"]
+        technologies: ["Node.js", "Express", "REST APIs", "Postman"]
       },
       {
         name: "Still Learning New Skills",
