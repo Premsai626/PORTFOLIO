@@ -14,12 +14,19 @@ import { DeveloperConsole } from '@/components/ui/DeveloperConsole';
 import { ExecutiveBrief } from '@/components/ExecutiveBrief';
 import { ScrollProgressBar } from '@/components/ui/ScrollProgressBar';
 import { ScrollVelocityMarquee } from '@/components/ui/ScrollVelocityMarquee';
+import { IntroScreen } from '@/components/IntroScreen';
 
 export const App: React.FC = () => {
+  const [introComplete, setIntroComplete] = useState(false);
   const [showExecutiveBrief, setShowExecutiveBrief] = useState(false);
 
   return (
     <div className="relative min-h-screen bg-[#030712] text-slate-100 selection:bg-cyan-500/30 selection:text-cyan-200">
+      {/* Handwritten "Portfolio" Cinematic Intro Screen */}
+      {!introComplete && (
+        <IntroScreen onComplete={() => setIntroComplete(true)} />
+      )}
+
       {/* Scroll Progress Bar at very top */}
       <ScrollProgressBar />
 
