@@ -18,33 +18,33 @@ const PARAGRAPHS: ParagraphData[] = [
     segments: [
       { text: 'I am a computer science student specializing in ' },
       {
-        text: 'Artificial Intelligence and Machine Learning (CSM)',
+        text: 'AI & Machine Learning (CSM)',
         highlight: true,
         className: 'text-sky-300 font-semibold bg-sky-500/10 px-1 py-0.5 rounded border border-sky-500/20',
       },
       { text: ' at ' },
       {
-        text: 'MLR Institute of Technology',
+        text: 'MLRIT',
         highlight: true,
         className: 'text-indigo-300 font-semibold bg-indigo-500/10 px-1 py-0.5 rounded border border-indigo-500/20',
       },
       {
-        text: '. I enjoy building software that solves practical problems — from ',
+        text: ', building ',
       },
       {
-        text: 'full-stack web platforms',
+        text: 'full-stack web apps',
         highlight: true,
         className: 'text-cyan-300 font-medium',
       },
-      { text: ' to ' },
+      { text: ', ' },
       {
-        text: 'machine learning applications',
+        text: 'AI systems',
         highlight: true,
         className: 'text-sky-300 font-medium',
       },
-      { text: ' and ' },
+      { text: ', and ' },
       {
-        text: 'microcontroller hardware',
+        text: 'IoT robotics',
         highlight: true,
         className: 'text-emerald-300 font-medium',
       },
@@ -54,9 +54,9 @@ const PARAGRAPHS: ParagraphData[] = [
   {
     className: 'text-slate-400 leading-relaxed font-normal text-sm sm:text-base',
     segments: [
-      { text: 'I believe the best way to understand systems is by building them. My projects include an ' },
+      { text: 'Key projects: ' },
       {
-        text: 'autonomous obstacle-avoiding smart car',
+        text: 'Obstacle-Avoiding Wi-Fi Robot',
         highlight: true,
         className: 'text-cyan-300 font-semibold',
       },
@@ -66,19 +66,13 @@ const PARAGRAPHS: ParagraphData[] = [
         highlight: true,
         className: 'text-indigo-300 font-semibold underline decoration-indigo-400/50 underline-offset-2',
       },
-      { text: ' (an AI-driven technical screening platform), ' },
+      { text: ' (AI interview platform), and ' },
       {
         text: 'VibeTune',
         highlight: true,
         className: 'text-emerald-300 font-semibold underline decoration-emerald-400/50 underline-offset-2',
       },
-      { text: ' (an AI mood-based music wellness app), and an ' },
-      {
-        text: 'intelligent FAQ documentation assistant',
-        highlight: true,
-        className: 'text-sky-300 font-semibold',
-      },
-      { text: '.' },
+      { text: ' (AI mood music app).' },
     ],
   },
 ];

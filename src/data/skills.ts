@@ -8,12 +8,12 @@ export const skillCategories: SkillCategory[] = [
   {
     id: "programming",
     name: "Programming",
-    description: "Languages I use for writing core logic, algorithms, and backend services.",
+    description: "Languages for core logic, algorithms, and backend services.",
     skills: [
       {
         name: "Python",
         level: "Strong",
-        highlight: "Backend services, FastAPI endpoints, data processing, automation scripting",
+        highlight: "FastAPI, automation scripting, algorithms",
         category: "Programming",
         iconKey: "python",
         technologies: ["FastAPI", "NumPy", "Pandas", "Automation", "REST APIs"]
@@ -21,77 +21,77 @@ export const skillCategories: SkillCategory[] = [
       {
         name: "Java",
         level: "Proficient",
-        highlight: "Object-oriented programming, data structures, multithreading, modular design",
+        highlight: "OOP, data structures, modular systems",
         category: "Programming",
         iconKey: "java",
-        technologies: ["OOP", "Collections", "Concurrency", "JVM"]
+        technologies: ["OOP", "Collections", "JVM"]
       },
       {
         name: "C / C++",
         level: "Solid Foundation",
-        highlight: "Memory management, pointers, embedded microcontroller programming",
+        highlight: "Pointers, memory management, embedded C",
         category: "Programming",
         iconKey: "cpp",
-        technologies: ["Pointers", "ESP8266", "Embedded C", "Algorithms", "GPIO Control"]
+        technologies: ["Pointers", "ESP8266", "Embedded C", "Algorithms"]
       },
       {
         name: "TypeScript",
         level: "Strong",
-        highlight: "Type safety, interfaces, reusable types, frontend state modeling",
+        highlight: "Type safety, interfaces, scalable state models",
         category: "Programming",
         iconKey: "typescript",
-        technologies: ["Generics", "Type Inference", "Interfaces", "Strict Mode", "TSX"]
+        technologies: ["Generics", "Type Inference", "Interfaces", "Strict Mode"]
       },
     ]
   },
   {
     id: "web-development",
     name: "Web Development",
-    description: "Building responsive, modern, and intuitive web interfaces.",
+    description: "Modern, responsive, and accessible user interfaces.",
     skills: [
       {
         name: "React",
         level: "Strong",
-        highlight: "Custom hooks, component state, reusable layouts, performance optimization",
+        highlight: "Custom hooks, component design, performance",
         category: "Web Development",
         iconKey: "react",
-        technologies: ["Hooks", "Context API", "Vite", "Component Architecture"]
+        technologies: ["Hooks", "Context API", "Vite", "Components"]
       },
       {
         name: "HTML5 & Web Standards",
         level: "Proficient",
-        highlight: "Semantic page structure, accessibility, canvas drawing, clean markup",
+        highlight: "Semantic markup, accessibility, clean structure",
         category: "Web Development",
         iconKey: "html",
-        technologies: ["Semantic HTML", "ARIA", "Canvas 2D", "Responsive Design"]
+        technologies: ["Semantic HTML", "ARIA", "Canvas 2D"]
       },
       {
         name: "CSS3 & Modern Styling",
         level: "Proficient",
-        highlight: "CSS Grid, Flexbox, smooth transitions, custom styling, responsive layouts",
+        highlight: "Flexbox, Grid, keyframe animations, glassmorphism",
         category: "Web Development",
         iconKey: "css",
-        technologies: ["Flexbox", "CSS Grid", "Keyframes", "Variables", "Glassmorphism"]
+        technologies: ["Flexbox", "CSS Grid", "Keyframes", "Variables"]
       },
     ]
   },
   {
     id: "backend-database",
     name: "Backend & Database",
-    description: "Connecting databases, building APIs, and handling application data.",
+    description: "Databases, cloud services, and RESTful APIs.",
     skills: [
       {
         name: "MongoDB",
         level: "Proficient",
-        highlight: "Document modeling, aggregation queries, schema structure, indexing",
+        highlight: "NoSQL document modeling, aggregation queries",
         category: "Backend & Database",
         iconKey: "mongodb",
-        technologies: ["Aggregation", "BSON", "Atlas", "Indexes", "Mongoose"]
+        technologies: ["Aggregation", "BSON", "Atlas", "Indexes"]
       },
       {
         name: "Supabase",
         level: "Proficient",
-        highlight: "PostgreSQL tables, Row Level Security, user authentication, live data",
+        highlight: "PostgreSQL, Row Level Security, Auth, Realtime",
         category: "Backend & Database",
         iconKey: "supabase",
         technologies: ["PostgreSQL", "RLS Policies", "Auth", "Storage"]
@@ -101,27 +101,27 @@ export const skillCategories: SkillCategory[] = [
   {
     id: "iot-hardware",
     name: "IoT & Hardware",
-    description: "Microcontroller programming, sensor telemetry, and embedded hardware.",
+    description: "Microcontroller systems, telemetry, and smart robotics.",
     skills: [
       {
         name: "IoT & Embedded Systems",
         level: "Proficient",
-        highlight: "Microcontroller coding, ultrasonic distance sensors, Wi-Fi teleoperation, motor drivers",
+        highlight: "ESP8266, ultrasonic telemetry, Wi-Fi teleoperation",
         category: "IoT & Hardware",
         iconKey: "iot",
-        technologies: ["ESP8266", "Ultrasonic Sensors", "PWM Drivers", "Serial Monitor", "C++"]
+        technologies: ["ESP8266", "Ultrasonic Sensors", "PWM Drivers", "C++"]
       },
     ]
   },
   {
     id: "tools",
     name: "Tools & Workflow",
-    description: "Developer tools, version control, and design software I rely on daily.",
+    description: "Developer tooling, version control, and design platforms.",
     skills: [
       {
         name: "Git & Version Control",
         level: "Strong",
-        highlight: "Branch management, clean commits, rebasing, merge resolution",
+        highlight: "Branching, clean commit history, rebasing",
         category: "Tools & Workflow",
         iconKey: "git",
         technologies: ["Branching", "Commits", "Rebase", "Git CLI"]
@@ -129,7 +129,7 @@ export const skillCategories: SkillCategory[] = [
       {
         name: "GitHub",
         level: "Strong",
-        highlight: "Repository management, pull requests, issue tracking, project collaboration",
+        highlight: "Repo management, CI/CD workflows, collaboration",
         category: "Tools & Workflow",
         iconKey: "github",
         technologies: ["Pull Requests", "Code Reviews", "Issues", "Pages"]
@@ -137,65 +137,65 @@ export const skillCategories: SkillCategory[] = [
       {
         name: "VS Code",
         level: "Proficient",
-        highlight: "Debugging, TypeScript integration, code formatting, daily engineering workflows",
+        highlight: "Debugging, extensions, TypeScript workflows",
         category: "Tools & Workflow",
         iconKey: "vscode",
-        technologies: ["Debugging", "Linting", "Prettier", "Extensions"]
+        technologies: ["Debugging", "Linting", "Prettier"]
       },
       {
         name: "Figma",
         level: "Proficient",
-        highlight: "Wireframing, UI mockups, component layouts, design exploration",
+        highlight: "Wireframing, prototyping, UI mockups",
         category: "Tools & Workflow",
         iconKey: "figma",
-        technologies: ["Wireframing", "UI Layouts", "Prototyping", "Components"]
+        technologies: ["Wireframing", "UI Layouts", "Prototyping"]
       },
     ]
   },
   {
     id: "learning",
     name: "Learning Skills",
-    description: "Technologies, frameworks, and APIs I am actively learning, practicing, and expanding.",
+    description: "Frameworks, tools, and technologies currently being explored.",
     skills: [
       {
         name: "JavaScript",
         level: "Learning",
-        highlight: "Modern ES6+, async/await, DOM interaction, event-driven web patterns",
+        highlight: "ES6+, async/await, DOM APIs, event loop",
         category: "Learning Skills",
         iconKey: "javascript",
-        technologies: ["ES6+", "Async/Await", "DOM", "Fetch API", "Event Loop"]
+        technologies: ["ES6+", "Async/Await", "DOM", "Fetch API"]
       },
       {
         name: "Tailwind CSS",
         level: "Learning",
-        highlight: "Utility-first design, responsive layouts, theme customization, modern UI styling",
+        highlight: "Utility classes, responsive design, custom themes",
         category: "Learning Skills",
         iconKey: "tailwind",
-        technologies: ["Utility Classes", "Flex/Grid", "Dark Mode", "Custom Themes"]
+        technologies: ["Utility Classes", "Flex/Grid", "Dark Mode"]
       },
       {
         name: "Node.js",
         level: "Learning",
-        highlight: "Server-side runtime, Express routing, backend services, npm module ecosystem",
+        highlight: "Runtime environment, Express routing, npm ecosystem",
         category: "Learning Skills",
         iconKey: "nodejs",
-        technologies: ["Express", "NPM Scripts", "File System", "Backend Scripts"]
+        technologies: ["Express", "NPM Scripts", "Backend Scripts"]
       },
       {
         name: "REST APIs",
         level: "Learning",
-        highlight: "HTTP endpoints, JSON request/response handling, client-server communication, API testing",
+        highlight: "HTTP endpoints, JSON communication, API testing",
         category: "Learning Skills",
         iconKey: "api",
-        technologies: ["HTTP Methods", "JSON Payloads", "CORS", "Postman", "Endpoints"]
+        technologies: ["HTTP Methods", "JSON", "CORS", "Postman"]
       },
       {
         name: "Still Learning New Skills",
         level: "Always Active",
-        highlight: "Constantly exploring Next.js, Docker, modern cloud tools, system design, and emerging frameworks.",
+        highlight: "Exploring Next.js, Docker, cloud tools, and system architecture",
         category: "Learning Skills",
         iconKey: "learning",
-        technologies: ["Next.js", "Docker", "DevOps", "System Design", "Cloud"]
+        technologies: ["Next.js", "Docker", "DevOps", "System Design"]
       }
     ]
   }

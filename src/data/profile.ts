@@ -7,18 +7,17 @@ import { Profile } from '../types';
  */
 export const profile: Profile = {
   name: "PREM SAI",
-  role: "Software Engineer • Full Stack Developer • AI Explorer",
+  role: "Software Engineer • Full Stack & AI Developer",
   titles: [
     "Software Engineer",
     "Full Stack Developer",
     "AI & ML Builder",
-    "IoT & Robotics Explorer",
-    "Computer Science Student"
+    "IoT & Robotics Developer"
   ],
-  headline: "Building reliable web applications, exploring machine learning systems, and creating practical software solutions.",
-  bio: "I am a Computer Science student specializing in Artificial Intelligence and Machine Learning (CSM) at MLR Institute of Technology. I enjoy building clean, responsive web platforms, training machine learning models, and programming microcontrollers for robotics. I focus on writing maintainable code and crafting intuitive user experiences.",
-  tagline: "Writing clean code, exploring AI systems, and building responsive web applications.",
-  status: "Open to internships & software development roles",
+  headline: "Building web apps, AI systems, and IoT hardware with clean architecture.",
+  bio: "Computer Science (AIML) student at MLRIT building full-stack platforms, machine learning pipelines, and robotics hardware.",
+  tagline: "Clean code, practical AI systems, and responsive web platforms.",
+  status: "Open to internships & software developer roles",
   avatarUrl: "/images/prem-sai-avatar.jpg",
   education: {
     degree: "B.Tech in Computer Science & Engineering",
@@ -28,9 +27,9 @@ export const profile: Profile = {
     status: "Undergraduate Student",
   },
   stats: [
-    { label: "Technologies", value: "15+", description: "Languages, frameworks & databases" },
-    { label: "Hands-on Hours", value: "1,200+", description: "Building, debugging & shipping code" },
-    { label: "Dedication", value: "100%", description: "Always learning and improving" },
+    { label: "Technologies", value: "15+", description: "Languages, tools & frameworks" },
+    { label: "Hours Coded", value: "1,200+", description: "Building & shipping projects" },
+    { label: "Commitment", value: "100%", description: "Continuous learning" },
   ],
   links: {
     github: "https://github.com/Premsai626",
