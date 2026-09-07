@@ -127,7 +127,7 @@ export const Contact: React.FC = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <SectionHeading
-          number="08"
+          number="06"
           badge="GET IN TOUCH"
           title="Let's connect and"
           highlight="build something great."

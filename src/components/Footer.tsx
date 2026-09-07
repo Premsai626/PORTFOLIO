@@ -71,7 +71,7 @@ export const Footer: React.FC = () => {
               Navigation
             </h5>
             <ul className="space-y-2 text-xs text-slate-400 font-medium">
-              {['Home', 'About', 'Skills', 'Projects', 'Experience', 'Education', 'Contact'].map(
+              {['Home', 'About', 'Skills', 'Projects', 'Education', 'Contact'].map(
                 (item) => (
                   <li key={item}>
                     <a

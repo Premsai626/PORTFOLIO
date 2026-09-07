@@ -45,7 +45,7 @@ export const Achievements: React.FC = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <SectionHeading
-          number="07"
+          number="05"
           badge="ACCREDITATIONS & RECOGNITION"
           title="Verified certificates, hackathons &"
           highlight="technical honors."

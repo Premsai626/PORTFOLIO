@@ -26,7 +26,7 @@ export const Education: React.FC = () => {
     <section id="education" className="py-24 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <SectionHeading
-          number="06"
+          number="04"
           badge="ACADEMIC BACKGROUND"
           title="Academic foundation in"
           highlight="computer science & AI."
